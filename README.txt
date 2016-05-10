@@ -1,5 +1,5 @@
 #--------------------------#
-# XBTIT
+# XBTIT 3
 #--------------------------#
 Just a few words about this piece of script and some credits ;)
 
