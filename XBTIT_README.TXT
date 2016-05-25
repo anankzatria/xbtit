@@ -11,13 +11,6 @@ buy xbtit PREMIUM @ www.xbtit.com
 - installation help
 - software support
 
-get xbtit DT FM / DC @ www.xbtitdeveloping.nl
-- based upon xbtit
-- many hacks professionally pre-installed
-- most hacks fully work on both the php and xbt backends
-- regular bug fixes for any found issues
-- private support forum
-
 buy xbtitFM @ www.xbtitfm.com
 - based upon xbtit
 - many hacks professionally pre-installed

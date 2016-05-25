@@ -1,5 +1,5 @@
 #--------------------------#
-# XBTIT 3
+# XBTIT 3 - MASTER - DEVELOPMENT & TESTING ONLY (Not yet suitable for live environments)
 #--------------------------#
 Just a few words about this piece of script and some credits ;)
 
