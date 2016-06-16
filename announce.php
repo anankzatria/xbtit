@@ -394,10 +394,10 @@ function start($info_hash, $ip, $port, $peer_id, $left, $downloaded=0, $uploaded
     else
         $ip = getip();
 
+    $remotedns = gethostbyaddr($ip);
     $ip =  mysqli_query($GLOBALS['conn'],$ip);
     $agent =  mysqli_query($GLOBALS['conn'],$_SERVER["HTTP_USER_AGENT"]);
-    $remotedns = gethostbyaddr($ip);
-
+    
     if (isset($_GET["ip"])) $nuIP = $_GET["ip"];
       else $nuIP = "";
     if ($remotedns == $nuIP)
