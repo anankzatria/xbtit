@@ -52,20 +52,34 @@
 <tag:main_content />
 <tag:main_footer />
  </div>
-</div>
-<!-- /.row -->
-    <!-- Footer -->
+</div><!-- /.row -->
+
+        <!-- Footer -->
         <footer>
-            <div class="row">
-                <div class="col-lg-12">
-				    
-                    <p align="center">Copyright &copy; 2016 XBTIT <tag:style_copyright />&nbsp;<tag:xbtit_version /></p>
-					<p align="center"><tag:xbtit_debug /></p>
-                </div>
-            </div>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+        </div>
+        <div class="panel-body">
+            <center>	    
+                <p class="text-success">Copyright &copy; 2016 XBTIT <tag:style_copyright />&nbsp;<tag:xbtit_version /></p>
+		<p class="text-danger"><tag:xbtit_debug /></p>
+		<a class="btn btn-lg btn-success" href="https://fortawesome.github.io/Font-Awesome/"><i class="fa fa-fort-awesome fa-2x pull-left" aria-hidden="true"></i> Font Awesome Version 4.6.1</a>&nbsp;&nbsp;
+                <a class="btn btn-lg btn-primary" href="https://getbootstrap.com"><i class="fa fa-css3 fa-2x pull-left" aria-hidden="true"></i> Bootstrap Version 3.3.6</a>
+                <p class="text-danger"><tag:xbtit_version /> is best viewed with the following browsers</p>
+                <button class="btn btn-primary btn-circle btn-lg" type="button"><i class="fa fa-safari"></i></button>
+                <button class="btn btn-warning btn-circle btn-lg" type="button"><i class="fa fa-firefox"></i></button>
+                <button class="btn btn-success btn-circle btn-lg" type="button"><i class="fa fa-chrome"></i></button>
+             </center>
+        </div>
+        </div>
         </footer>
-    </div>
-    <!-- /.container -->
+        </div><!-- /.container -->
+        
+        
     <!-- jQuery -->
     <script src="style/xbtit_default/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
