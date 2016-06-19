@@ -30,7 +30,6 @@ BTITeam http://www.btiteam.org
 - new AJAX shoutbox (big thanks to miskotes)
 - XSS/SQL injection protection with log insertion (thank you cobracrk)
 - new AJAX polls system (thank you to Ripper)
-- new design (4 styles provided by TreepTopClimber)
 - RSS reader (only class, with example in admincp for btiteam.org latest news)
 - basic cache system
 - new language system (array is used instead of constant)
@@ -71,9 +70,6 @@ The rest has been coded, designed, and thought up from scratch
 
 Thanks to coder addons/hacks (many are included in this version): 
 Ripper, cobracrk, JBoy, Liroy, Petr1fied, miskotes, gAndo, Fireworx, Freelancer, Sktoch, Nimrod
-
-Thanks to style maker: 
-TreeTopClimber
 
 Founders: Lupin
 Maintainers: Gh0st4unt3r, King Cobra
