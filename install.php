@@ -88,10 +88,10 @@ function load_lang_file()
     $GLOBALS["find_install_lang"] = array();
 
     // Make sure the languages directory actually exists.
-    if (file_exists(dirname(__FILE__) . '/system/install_lang/'))
+    if (file_exists(dirname(__FILE__) . '/system/language/install_lang/'))
     {
         // Find all the "Install" language files in the directory.
-        $dir = dir(dirname(__FILE__) . '/system/install_lang/');
+        $dir = dir(dirname(__FILE__) . '/system/language/install_lang/');
         while ($entry = $dir->read())
         {
             if (substr($entry, 0, 8) == 'install.' && substr($entry, -4) == '.php')
@@ -114,7 +114,7 @@ function load_lang_file()
         echo ("<body style=\"font-family: sans-serif;\"><div style=\"width: 600px;\">");
         echo ("<p>A critical language error has occurred.</p>");
         echo ("<p>This installer was unable to find the installer's language file or files.  They should be found under:</p>");
-        echo ("<div style=\"margin: 1ex; font-family: monospace; font-weight: bold;\">/system/install_lang/</div>");
+        echo ("<div style=\"margin: 1ex; font-family: monospace; font-weight: bold;\">/system/language/install_lang/</div>");
         echo ("<p>In some cases, FTP clients do not properly upload files with this many folders.  Please double check to make sure you <span style=\"font-weight: 600;\">have uploaded all the files in the distribution</span>.</p>");
         echo ("<p>If you continue to get this error message, feel free to <a href=\"http://www.btiteam.org/smf/index.php/\">look to us for support</a>.</p>");
         echo ("</div>");
@@ -130,7 +130,7 @@ function load_lang_file()
     else $_SESSION["install_lang"] = "install.english.php";
 
     // Make sure it exists, if it doesn't reset it.
-    if (!isset($_SESSION["install_lang"]) || !file_exists(dirname(__FILE__) . '/system/install_lang/' . $_SESSION["install_lang"]))
+    if (!isset($_SESSION["install_lang"]) || !file_exists(dirname(__FILE__) . '/system/language/install_lang/' . $_SESSION["install_lang"]))
     {
         // Use the first one...
         list ($_SESSION["install_lang"]) = array_keys($GLOBALS["find_install_lang"]);
@@ -141,7 +141,7 @@ function load_lang_file()
     }
 
     // And now include the actual language file itself.
-    require_once(dirname(__FILE__) . '/system/install_lang/' . $_SESSION["install_lang"]);
+    require_once(dirname(__FILE__) . '/system/language/install_lang/' . $_SESSION["install_lang"]);
 }
 
 function language_list()
