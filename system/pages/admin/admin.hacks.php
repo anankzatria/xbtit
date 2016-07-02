@@ -46,7 +46,7 @@ switch ($action)
         $admintpl->set("language",$language);
         $admintpl->set("manual_install",false,true);
         $admintpl->set("test",false,true);
-        require_once($THIS_BASEPATH."/include/class.update_hacks.php");    
+        require_once($THIS_BASEPATH."/system/core/class.update_hacks.php");    
         $filename=urldecode(base64_decode($_GET["folder"]))."/modification.xml";
         $fd=fopen($filename, "r");
         $xml=fread($fd,filesize($filename));
@@ -131,7 +131,7 @@ switch ($action)
         if (count($ui_hack)>0)
           {
 
-            include("$THIS_BASEPATH/include/class.update_hacks.php");
+            include("$THIS_BASEPATH/system/core/class.update_hacks.php");
 
             $hack_folder=unesc($ui_hack[0]["folder"]);
 
@@ -142,7 +142,7 @@ switch ($action)
             $newhack=new update_hacks();
 
             // we open the work definition file
-            $hstring=$newhack->open_hack("$THIS_BASEPATH/hacks/$hack_folder/modification.xml");
+            $hstring=$newhack->open_hack("$THIS_BASEPATH/custom/hacks/$hack_folder/modification.xml");
 
             // all structure is now in an array
             $new_hack_array=$newhack->hack_to_array($hstring);
@@ -180,7 +180,7 @@ switch ($action)
         if (count($ui_hack)>0)
           {
 
-            include("$THIS_BASEPATH/include/class.update_hacks.php");
+            include("$THIS_BASEPATH/system/core/class.update_hacks.php");
 
             $hack_folder=unesc($ui_hack[0]["folder"]);
 
@@ -266,7 +266,7 @@ switch ($action)
           die();
         }
 
-        include("$THIS_BASEPATH/include/class.update_hacks.php");
+        include("$THIS_BASEPATH/system/core/class.update_hacks.php");
 
         if (isset($_POST["add_hack_folder"]))
             $hack_folder=$_POST["add_hack_folder"];
@@ -281,7 +281,7 @@ switch ($action)
         $newhack=new update_hacks();
 
         // we open the work definition file
-        $hstring=$newhack->open_hack("$THIS_BASEPATH/hacks/$hack_folder/modification.xml");
+        $hstring=$newhack->open_hack("$THIS_BASEPATH/custom/hacks/$hack_folder/modification.xml");
 
         // all structure is now in an array
         $new_hack_array=$newhack->hack_to_array($hstring);
@@ -314,7 +314,7 @@ switch ($action)
 
     case 'test':
 
-        include("$THIS_BASEPATH/include/class.update_hacks.php");
+        include("$THIS_BASEPATH/system/core/class.update_hacks.php");
 
         if (isset($_POST["add_hack_folder"]))
             $hack_folder=$_POST["add_hack_folder"];
