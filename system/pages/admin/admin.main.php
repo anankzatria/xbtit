@@ -101,9 +101,9 @@ else
   $admin["torrent_ok"]=("<br />\nTorrent's folder $TORRENTSDIR<br />\n<span style=\"color:#FF0000; font-weight: bold;\">NOT FOUND!</span><br />\n");
 
 // check cache folder
-if (file_exists("$THIS_BASEPATH/cache"))
+if (file_exists("$THIS_BASEPATH/system/cache"))
   {
-  if (is_writable("$THIS_BASEPATH/cache"))
+  if (is_writable("$THIS_BASEPATH/system/cache"))
         $admin["cache_ok"]=("cache folder<br />\n<span style=\"color:#BEC635; font-weight: bold;\">is writable</span><br />\n");
   else
         $admin["cache_ok"]=("cache folder is<br />\n<span style=\"color:#FF0000; font-weight: bold;\">NOT writable</span><br />\n");
