@@ -74,7 +74,7 @@ require_once(load_language("lang_account.php"));
              else
                  print("<tr><td align=\"center\">".$language["NO_MAIL"]."</td></tr>");
              print("<tr><td align=\"center\">");
-             include("include/offset.php");
+             include("system/core/offset.php");
              print($language["USER_LASTACCESS"].":<br />".date("d/m/Y H:i:s",$CURUSER["lastconnect"]-$offset));
              print("</td></tr>\n<tr><td align=\"center\">");
              print($language["USER_STYLE"].":<br />\n<select name=\"style\" size=\"1\" onchange=\"location=document.jump.style.options[document.jump.style.selectedIndex].value\">");
