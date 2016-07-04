@@ -364,9 +364,9 @@ $torrenttpl->set("RAT",false,TRUE);
    else $torrents[$i]["waiting"]="";
 
 
-   $torrents[$i]["download"]="<a href=\"download.php?id=".$data["hash"]."&amp;f=" . urlencode($data["filename"]) . ".torrent\">".image_or_link("images/download.gif","","torrent")."</a>\n";
+   $torrents[$i]["download"]="<a href=\"system/pages/download.php?id=".$data["hash"]."&amp;f=" . urlencode($data["filename"]) . ".torrent\">".image_or_link("system/images/download.gif","","torrent")."</a>\n";
 
-   include("include/offset.php");
+   include("system/core/offset.php");
    $torrents[$i]["added"]=date("d/m/Y",$data["added"]-$offset); // data
    $torrents[$i]["size"]=makesize($data["size"]);
 
