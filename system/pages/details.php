@@ -202,7 +202,7 @@ $row["rating"]=$s;
 $row["size"]=makesize($row["size"]);
 // files in torrent - by Lupin 20/10/05
 
-require_once(__DIR__."/include/BDecode.php");
+require_once("system/core/BDecode.php");
 if (file_exists($row["url"]))
   {
     $torrenttpl->set("DISPLAY_FILES",TRUE,TRUE);
@@ -243,7 +243,7 @@ else
 $torrenttpl->set("files",$dfiles);
 
 // end files in torrents
-include(__DIR__."/include/offset.php");
+include("system/core/offset.php");
 $row["date"]=date("d/m/Y",$row["data"]-$offset);
 
 if ($row["anonymous"]=="true")
