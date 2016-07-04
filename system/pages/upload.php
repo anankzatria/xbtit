@@ -264,7 +264,7 @@ if (!isset($array["announce"]))
 //         if ($announce!=$BASEURL."/announce.php")
         if (!in_array($announce,$TRACKER_ANNOUNCEURLS))
             {
-                require_once("./include/getscrape.php");
+                require_once("./system/core/getscrape.php");
                 scrape($announce,$hash);
                 $status=2;
                 write_log("Uploaded new torrent $filename - EXT ($hash)","add");
