@@ -1168,7 +1168,7 @@ function format_comment($text, $strip_html = true) {
   $smilies=array_merge($smilies, $privatesmilies);
   reset($smilies);
   while (list($code, $url) = each($smilies))
-    $text = str_replace($code, '<img border="0" src="'.$BASEURL.'/images/smilies/'.$url.'" alt="'.$url.'" />', $text);
+    $text = str_replace($code, '<img border="0" src="'.$BASEURL.'/system/images/smilies/'.$url.'" alt="'.$url.'" />', $text);
 
   return $text;
 }
@@ -1367,7 +1367,7 @@ function textbbcode($form,$name,$content='') {
   reset($smilies);
   $tbbcode.='<tr>';
   while ((list($code, $url) = each($smilies)) && $count<16) {
-    $tbbcode.="\n<td><a href=\"javascript: SmileIT('".str_replace("'","\'",$code)."',document.forms.$form.$name);\"><img border=\"0\" src=\"images/smilies/$url\" alt=\"$url\" /></a></td>";
+    $tbbcode.="\n<td><a href=\"javascript: SmileIT('".str_replace("'","\'",$code)."',document.forms.$form.$name);\"><img border=\"0\" src=\"system/images/smilies/$url\" alt=\"$url\" /></a></td>";
     $count++;
   }
   $tbbcode.="\n</tr>\n</table>";
